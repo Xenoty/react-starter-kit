@@ -1,0 +1,31 @@
+.nav-link {
+    margin: auto;
+    z-index: 4;
+
+    &.active {
+        text-decoration: underline;
+    }
+}
+
+.hamburger {
+    .line {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #000; // Or your desired color
+        margin: 5px auto;
+        transition: transform 0.3s ease, opacity 0.3s ease; /* Add transitions */
+    }
+
+    &:not(.collapsed) {  /* Apply styles when NOT collapsed (expanded) */
+        .line-1 {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        .line-2 {
+            opacity: 0;
+        }
+        .line-3 {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+    }
+}
