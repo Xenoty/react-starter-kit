@@ -6,7 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import "./app/styles/custom.scss"; 
 
 const rootElement = document.getElementById('root') as HTMLElement;
-// Uncomment below if you want to set the theme to dark by default.
+// Get browser's preferred color scheme
+const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+// Set the Bootstrap theme attribute based on preference
+document.body.setAttribute('data-bs-theme', prefersDarkMode ? 'dark' : 'light'); 
+// Otherwise, uncomment below if you want to set the theme to dark by default.
 // document.body.setAttribute('data-bs-theme', 'dark');
 const root = ReactDOM.createRoot(rootElement);
 root.render(
