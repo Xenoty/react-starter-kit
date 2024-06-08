@@ -1,4 +1,9 @@
-import React, { PropsWithChildren, createContext, useContext, useState } from 'react';
+import React, {
+  PropsWithChildren,
+  createContext,
+  useContext,
+  useState,
+} from 'react';
 
 interface NavbarContextType {
   isExpanded: boolean;

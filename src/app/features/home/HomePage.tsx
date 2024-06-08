@@ -5,9 +5,9 @@ import SEO from '../../components/SEO';
 import seoData from './seo.json'; // Import the SEO data
 
 const HomePage: React.FC = () => {
-    return  (
+  return (
     <div className="App">
-      <SEO {...seoData}/>
+      <SEO {...seoData} />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -24,6 +24,6 @@ const HomePage: React.FC = () => {
       </header>
     </div>
   );
-}
+};
 
 export default HomePage;

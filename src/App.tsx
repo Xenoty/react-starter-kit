@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import NavigationBar from './app/navigation/Navbar';
 import { NavbarProvider } from './app/navigation/NavbarContext';
@@ -11,17 +11,17 @@ import { HelmetProvider } from 'react-helmet-async';
 function App() {
   return (
     <>
-    <HelmetProvider>
-      <BrowserRouter>
-        <NavbarProvider>
-          <NavigationBar />
-        </NavbarProvider>
-        <Routes>
-          <Route path={routes.home.path} element={<HomePage />} /> 
-          <Route path={routes.example.path} element={<ExamplePage />} /> 
-        </Routes>
-      </BrowserRouter>
-    </HelmetProvider>
+      <HelmetProvider>
+        <BrowserRouter>
+          <NavbarProvider>
+            <NavigationBar />
+          </NavbarProvider>
+          <Routes>
+            <Route path={routes.home.path} element={<HomePage />} />
+            <Route path={routes.example.path} element={<ExamplePage />} />
+          </Routes>
+        </BrowserRouter>
+      </HelmetProvider>
     </>
   );
 }

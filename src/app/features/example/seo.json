@@ -1,8 +1,8 @@
 {
-    "title": "React Start Kit - Example",
-    "description": "This is the example page. A different description.",
-    "type": "website",
-    "ogImage": "https://picsum.photos/200/300",
-    "ogImageAlt": "This is a alt description",
-    "twitterCard": "summary"
+  "title": "React Start Kit - Example",
+  "description": "This is the example page. A different description.",
+  "type": "website",
+  "ogImage": "https://picsum.photos/200/300",
+  "ogImageAlt": "This is a alt description",
+  "twitterCard": "summary"
 }

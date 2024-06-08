@@ -1,23 +1,24 @@
 interface RouteConfig {
-    keyName: string;
-    displayName: string;
-    path: string;
+  keyName: string;
+  displayName: string;
+  path: string;
 }
 
-export const home: RouteConfig = {
-    keyName: "home",
-    displayName: "Home",
-    path: "/"
-}
+const home: RouteConfig = {
+  keyName: 'home',
+  displayName: 'Home',
+  path: '/',
+};
 
-export const example: RouteConfig = {
-    keyName: "example",
-    displayName: "Example",
-    path: "/example"
-}
+const example: RouteConfig = {
+  keyName: 'example',
+  displayName: 'Example',
+  path: '/example',
+};
 
 const routes = {
-    home, example
-}
+  home,
+  example,
+};
 
 export default routes;

@@ -1,39 +1,48 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from 'react';
 
 const useTheme = () => {
-    const setTheme = (isLight: boolean) => document.body.setAttribute('data-bs-theme', isLight ? 'light' : 'dark');
-    const getTheme = useCallback(() => document.body.getAttribute('data-bs-theme') as "light" | "dark" || 'light', []);
-    
-    const [isLight, setIsLight] = useState(getTheme() === 'light');
-    const [isDark, setIsDark] = useState(getTheme() === 'dark');
+  const setTheme = (isLight: boolean) =>
+    document.body.setAttribute('data-bs-theme', isLight ? 'light' : 'dark');
+  const getTheme = useCallback(
+    () =>
+      (document.body.getAttribute('data-bs-theme') as 'light' | 'dark') ||
+      'light',
+    []
+  );
 
-    useEffect(() => {
-        const handleThemeChange = () => {
-            const newTheme = getTheme();
-            setIsLight(newTheme === 'light');
-            setIsDark(newTheme === 'dark');
+  const [isLight, setIsLight] = useState(getTheme() === 'light');
+  const [isDark, setIsDark] = useState(getTheme() === 'dark');
 
-            // Optionally, dispatch a custom event here (as discussed previously)
-            // window.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme: newTheme } }));
-        };
+  useEffect(() => {
+    const handleThemeChange = () => {
+      const newTheme = getTheme();
+      setIsLight(newTheme === 'light');
+      setIsDark(newTheme === 'dark');
 
-        // Use MutationObserver to watch for attribute changes
-        const observer = new MutationObserver(mutationsList => {
-            for (const mutation of mutationsList) {
-                if (mutation.type === 'attributes' && mutation.attributeName === 'data-bs-theme') {
-                    handleThemeChange();
-                }
-            }
-        });
+      // Optionally, dispatch a custom event here (as discussed previously)
+      // window.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme: newTheme } }));
+    };
 
-        observer.observe(document.body, { attributes: true });
+    // Use MutationObserver to watch for attribute changes
+    const observer = new MutationObserver((mutationsList) => {
+      for (const mutation of mutationsList) {
+        if (
+          mutation.type === 'attributes' &&
+          mutation.attributeName === 'data-bs-theme'
+        ) {
+          handleThemeChange();
+        }
+      }
+    });
 
-        return () => {
-            observer.disconnect(); // Cleanup on unmount
-        };
-    }, [getTheme]); // Add getTheme as a dependency
+    observer.observe(document.body, { attributes: true });
 
-    return { setTheme, isLight, isDark };
-}
+    return () => {
+      observer.disconnect(); // Cleanup on unmount
+    };
+  }, [getTheme]); // Add getTheme as a dependency
+
+  return { setTheme, isLight, isDark };
+};
 
 export default useTheme;

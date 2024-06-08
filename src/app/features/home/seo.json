@@ -1,8 +1,8 @@
 {
-    "title": "React Starter Kit",
-    "description": "Add your description here. This will appear in the preview when sharing a link.",
-    "type": "website",
-    "ogImage": "https://picsum.photos/200/300",
-    "ogImageAlt": "This is a alt description",
-    "twitterCard": "summary"
+  "title": "React Starter Kit",
+  "description": "Add your description here. This will appear in the preview when sharing a link.",
+  "type": "website",
+  "ogImage": "https://picsum.photos/200/300",
+  "ogImageAlt": "This is a alt description",
+  "twitterCard": "summary"
 }
