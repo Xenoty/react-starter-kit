@@ -35,37 +35,37 @@ const NavigationBar: React.FC = () => {
           BRAND NAME
         </Navbar.Brand>
         <Stack direction="horizontal" gap={3}>
+          <Navbar.Collapse id="basic-navbar-nav">         
+            <Nav 
+              className={clsx(
+                        isLg ? 'fs-5' : 'fs-1 position-fixed top-0 start-0 w-100 h-100',  
+                        isDark ? 'bg-dark' : 'bg-white', 
+                        "ms-auto")} 
+              style={{zIndex: 4}}>
+                {navLinks.map((link, index) => (
+                  <Nav.Link 
+                  key={index}
+                  eventKey={link.eventKey}
+                  as={NavLink} 
+                  to={link.to}
+                  >
+                    {link.label}
+                  </Nav.Link>
+                ))}
+            </Nav>
+          </Navbar.Collapse>
           <Button variant={isDark ? 'outline-light ' : 'outline-dark'} 
                     onClick={() => {setTheme(isDark)}}
                     className="theme-switch border border-opacity-50"
                     aria-label="Toggle Theme">
               <FontAwesomeIcon icon={isDark ? faMoon : faSun} />
-            </Button>
+          </Button>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="hamburger" style={{zIndex: 5}}>
             <span className={clsx("line line-1", isDark ?'bg-light' : 'bg-dark' )}></span>
             <span className={clsx("line line-2", isDark ?'bg-light' : 'bg-dark' )}></span>
             <span className={clsx("line line-3", isDark ?'bg-light' : 'bg-dark' )}></span>
           </Navbar.Toggle>
         </Stack>
-        <Navbar.Collapse id="basic-navbar-nav">         
-          <Nav 
-          className={clsx(
-                    isLg ? 'fs-5' : 'fs-1 position-fixed top-0 start-0 w-100 h-100',  
-                    isDark ? 'bg-dark' : 'bg-white', 
-                    "ms-auto")} 
-          style={{zIndex: 4}}>
-            {navLinks.map((link, index) => (
-              <Nav.Link 
-              key={index}
-              eventKey={link.eventKey}
-              as={NavLink} 
-              to={link.to}
-              >
-                {link.label}
-              </Nav.Link>
-            ))}
-          </Nav>
-        </Navbar.Collapse>
       </Container>
     </Navbar>
     </>
