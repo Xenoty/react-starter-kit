@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar, Stack } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -34,20 +34,19 @@ const NavigationBar: React.FC = () => {
         <Navbar.Brand href={routes.home.path} className="secondary-heading" style={{zIndex: 5}}>
           BRAND NAME
         </Navbar.Brand>
-        <Button variant={isDark ? 'outline-light' : 'outline-dark'} 
-                  onClick={() => {
-                    console.log('isDark', isDark)
-                    setTheme(isDark)}
-                  } 
-                  className="theme-switch"
-                  aria-label="Toggle Theme">
-            <FontAwesomeIcon icon={isDark ? faMoon : faSun} />
-          </Button>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className="hamburger" style={{zIndex: 5}}>
-          <span className="line line-1"></span>
-          <span className="line line-2"></span>
-          <span className="line line-3"></span>
-        </Navbar.Toggle>
+        <Stack direction="horizontal" gap={3}>
+          <Button variant={isDark ? 'outline-light ' : 'outline-dark'} 
+                    onClick={() => {setTheme(isDark)}}
+                    className="theme-switch border border-opacity-50"
+                    aria-label="Toggle Theme">
+              <FontAwesomeIcon icon={isDark ? faMoon : faSun} />
+            </Button>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className="hamburger" style={{zIndex: 5}}>
+            <span className={clsx("line line-1", isDark ?'bg-light' : 'bg-dark' )}></span>
+            <span className={clsx("line line-2", isDark ?'bg-light' : 'bg-dark' )}></span>
+            <span className={clsx("line line-3", isDark ?'bg-light' : 'bg-dark' )}></span>
+          </Navbar.Toggle>
+        </Stack>
         <Navbar.Collapse id="basic-navbar-nav">         
           <Nav 
           className={clsx(
