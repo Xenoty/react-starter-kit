@@ -6,19 +6,22 @@ import { NavbarProvider } from './app/navigation/NavbarContext';
 import routes from './app/navigation/routes';
 import HomePage from './app/features/home/HomePage';
 import ExamplePage from './app/features/example/ExamplePage';
+import { HelmetProvider } from 'react-helmet-async';
 
 function App() {
   return (
     <>
-    <BrowserRouter>
-      <NavbarProvider>
-        <NavigationBar />
-      </NavbarProvider>
-      <Routes>
-        <Route path={routes.home.path} element={<HomePage />} /> 
-        <Route path={routes.example.path} element={<ExamplePage />} /> 
-      </Routes>
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <NavbarProvider>
+          <NavigationBar />
+        </NavbarProvider>
+        <Routes>
+          <Route path={routes.home.path} element={<HomePage />} /> 
+          <Route path={routes.example.path} element={<ExamplePage />} /> 
+        </Routes>
+      </BrowserRouter>
+    </HelmetProvider>
     </>
   );
 }
