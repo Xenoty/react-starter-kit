@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../../assets/logo.svg';
+import './HomePage.scss';
 
 const HomePage: React.FC = () => {
     return  <div className="App">
