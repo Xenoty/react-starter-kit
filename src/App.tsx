@@ -1,11 +1,25 @@
 import React from 'react';
-import {RouterProvider } from 'react-router-dom';
+import {BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import router from './app/routes';
+import NavigationBar from './app/navigation/Navbar';
+import { NavbarProvider } from './app/navigation/NavbarContext';
+import routes from './app/navigation/routes';
+import HomePage from './app/features/home/HomePage';
+import ExamplePage from './app/features/example/ExamplePage';
 
 function App() {
   return (
-    <RouterProvider router={router} /> 
+    <>
+    <BrowserRouter>
+      <NavbarProvider>
+        <NavigationBar />
+      </NavbarProvider>
+      <Routes>
+        <Route path={routes.home.path} element={<HomePage />} /> 
+        <Route path={routes.example.path} element={<ExamplePage />} /> 
+      </Routes>
+    </BrowserRouter>
+    </>
   );
 }
 
