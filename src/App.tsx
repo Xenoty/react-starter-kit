@@ -7,7 +7,7 @@ import routes from './app/navigation/routes';
 import HomePage from './app/features/home/HomePage';
 import ExamplePage from './app/features/example/ExamplePage';
 import { HelmetProvider } from 'react-helmet-async';
-import FontsHeader from './app/components/headers/Fonts.header';
+import FontsHeader from './app/components/headers/Fonts';
 
 function App() {
   return (
