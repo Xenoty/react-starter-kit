@@ -1,15 +1,23 @@
-export namespace routes {
-    export namespace home {
-        export const keyName = "home";
-        export const displayName = "Home"
-        export const path = "/";
-    }
+interface RouteConfig {
+    keyName: string;
+    displayName: string;
+    path: string;
+}
 
-    export namespace example {
-        export const keyName = "example";
-        export const displayName = "Example"
-        export const path = "/example";
-    }
+export const home: RouteConfig = {
+    keyName: "home",
+    displayName: "Home",
+    path: "/"
+}
+
+export const example: RouteConfig = {
+    keyName: "example",
+    displayName: "Example",
+    path: "/example"
+}
+
+const routes = {
+    home, example
 }
 
 export default routes;
