@@ -1,3 +1,24 @@
 {
-    "extends": "airbnb"
+  "extends": [
+    "airbnb-typescript/base",
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ], // Use Airbnb's TypeScript base config
+  "plugins": ["prettier", "import"],
+  "parserOptions": {
+    "project": "./tsconfig.json" // Point to your TypeScript configuration
+  },
+
+  "rules": {
+    "prettier/prettier": "error"
+    // Add any custom rule overrides or additional rules here
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
 }
