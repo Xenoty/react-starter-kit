@@ -1,5 +1,5 @@
 interface Config {
-  yourEnvVariable: string;
+  SecretKey: string;
   // Add more environment variables as needed
 }
 
@@ -13,7 +13,8 @@ const checkEnvVars = (envVars: Config) => {
 };
 
 const config: Config = {
-  yourEnvVariable: process.env.REACT_APP_YOUR_VARIABLE || '',
+  SecretKey: import.meta.env.VITE_SECRET_KEY || 'empty_secret',
+  // yourEnvVariable: process.env.REACT_APP_YOUR_VARIABLE || '',
 };
 
 if (process.env.NODE_ENV !== 'production') {
