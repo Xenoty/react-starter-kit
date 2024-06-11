@@ -8,7 +8,6 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
     "clsx": "^2.1.1",
@@ -21,23 +20,20 @@
     "web-vitals": "^4.1.0"
   },
   "scripts": {
-    "dev": "vite",
+    "start": "vite --mode development",
+    "start:dev": "vite --mode development",
+    "staging": "vite build --mode staging",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "oldstart": "dotenv -e .env.local react-scripts start",
-    "oldstart:dev": "dotenv -e .env.development react-scripts start",
-    "oldstart:staging": "dotenv -e .env.staging react-scripts start",
-    "oldstart:prod": "dotenv -e .env.production react-scripts start",
-    "oldBuild": "dotenv -e .env.production react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "test": "vitest run",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
+  "lint-staged": {
+    "*.{ts,tsx,json,js}": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
     ]
   },
   "browserslist": {
@@ -53,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react": "^16.0.0",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.2",
     "@types/react": "^18.3.3",
@@ -68,9 +65,13 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react-hooks": "^4.6.2",
+    "husky": "^9.0.11",
+    "jsdom": "^24.1.0",
+    "lint-staged": "^15.2.5",
     "prettier": "^3.3.1",
     "sass": "^1.77.4",
     "typescript": "^5.4.5",
-    "vite": "^5.2.13"
+    "vite": "^5.2.13",
+    "vitest": "^1.6.0"
   }
 }
