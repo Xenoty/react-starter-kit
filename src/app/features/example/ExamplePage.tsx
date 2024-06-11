@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import SEO from '../../components/headers/Seo';
 import seoData from './seo.json';
-import config from '../../../config/config';
+import config from '../../../infrastructure/config/config';
 
 const ExamplePage = () => {
   return (
