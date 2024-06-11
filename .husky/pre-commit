@@ -3,3 +3,5 @@ echo "Running pre-commit hook..."
 
 npm test
 npx lint-staged --staged  
+
+echo "Finished pre-comit hook..."
