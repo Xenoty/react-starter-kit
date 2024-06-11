@@ -28,5 +28,10 @@ export default defineConfig(({ mode }) => {
     define: {
       'process.env': env, // Expose environment variables to your code
     },
+    test: {
+      globals: true,
+      environment: 'jsdom',
+      setupFiles: './src/tests/setupTests.ts',
+    },
   };
 });
