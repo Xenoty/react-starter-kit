@@ -12,14 +12,13 @@ import useTheme from '../hooks/useTheme';
 
 const navLinks = [
   {
-    eventKey: routes.home.keyName,
-    label: routes.home.displayName,
-    to: routes.home.path,
+    ...routes.home,
   },
   {
-    eventKey: routes.example.keyName,
-    label: routes.example.displayName,
-    to: routes.example.path,
+    ...routes.example,
+  },
+  {
+    ...routes.products,
   },
   // ... other nav links
 ];
@@ -41,7 +40,7 @@ const NavigationBar: React.FC = () => {
       >
         <Container>
           <Navbar.Brand
-            href={routes.home.path}
+            href={routes.home.to}
             className="secondary-heading"
             style={{ zIndex: 5 }}
           >

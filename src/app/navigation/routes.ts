@@ -1,24 +1,31 @@
 interface RouteConfig {
-  keyName: string;
-  displayName: string;
-  path: string;
+  eventKey: string;
+  label: string;
+  to: string;
 }
 
 const home: RouteConfig = {
-  keyName: 'home',
-  displayName: 'Home',
-  path: '/',
+  eventKey: 'home',
+  label: 'Home',
+  to: '/',
 };
 
 const example: RouteConfig = {
-  keyName: 'example',
-  displayName: 'Example',
-  path: '/example',
+  eventKey: 'example',
+  label: 'Example',
+  to: '/example',
+};
+
+const products = {
+  eventKey: 'products',
+  label: 'Products',
+  to: '/products',
 };
 
 const routes = {
   home,
   example,
+  products,
 };
 
 export default routes;

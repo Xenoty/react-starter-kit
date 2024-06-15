@@ -1,5 +1,4 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
-import config from '../../infrastructure/config/config';
 
 class ApiClient {
   private axiosInstance: AxiosInstance;
@@ -44,6 +43,4 @@ class ApiClient {
   // ... similar methods for put, patch, delete
 }
 
-const apiClient = new ApiClient(config.ApiUrl);
-
-export default apiClient;
+export default ApiClient;

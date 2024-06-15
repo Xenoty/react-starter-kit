@@ -8,6 +8,7 @@ import HomePage from './app/features/home/HomePage';
 import ExamplePage from './app/features/example/ExamplePage';
 import { HelmetProvider } from 'react-helmet-async';
 import FontsHeader from './app/components/headers/Fonts';
+import ProductsPage from './app/features/products/ProductsPage';
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
             <NavigationBar />
           </NavbarProvider>
           <Routes>
-            <Route path={routes.home.path} element={<HomePage />} />
-            <Route path={routes.example.path} element={<ExamplePage />} />
+            <Route path={routes.home.to} element={<HomePage />} />
+            <Route path={routes.example.to} element={<ExamplePage />} />
+            <Route path={routes.products.to} element={<ProductsPage />} />
           </Routes>
         </BrowserRouter>
       </HelmetProvider>
