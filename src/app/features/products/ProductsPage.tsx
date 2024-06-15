@@ -110,7 +110,7 @@ const ProductsPage: React.FC = () => {
         style={{ overflowX: 'hidden' }}
         loader={
           <Row xs={2} sm={2} md={3} lg={4} className="g-4">
-            {Array.from({ length: 10 }).map((_, index) => (
+            {Array.from({ length: 12 }).map((_, index) => (
               <Col key={index}>
                 <Card style={{ width: '18rem' }}>
                   <Skeleton height={20} />
