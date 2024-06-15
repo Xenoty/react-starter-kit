@@ -6,6 +6,8 @@ import { Product } from '../../../domain/entities/Product';
 import { getAllProducts } from '../../../data/api/endpoints/product.endpoint';
 import { Card, Col, Container, Form, Row } from 'react-bootstrap';
 import './ProductsPage.scss';
+import SEO from '../../components/headers/Seo';
+import seoData from './seo.json'; // Import the SEO data
 
 const ProductsPage: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -89,6 +91,7 @@ const ProductsPage: React.FC = () => {
 
   return (
     <Container className="justify-content-center">
+      <SEO {...seoData} />
       <Form.Control
         type="text"
         placeholder="Search products..."
@@ -104,6 +107,7 @@ const ProductsPage: React.FC = () => {
         dataLength={filteredProducts.length}
         next={fetchData}
         hasMore={hasMore}
+        style={{ overflowX: 'hidden' }}
         loader={
           <Row xs={2} sm={2} md={3} lg={4} className="g-4">
             {Array.from({ length: 10 }).map((_, index) => (
