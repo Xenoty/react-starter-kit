@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     server: {
-      host: 'localhost',
+      host: true, // 0.0.0.0
       port: 3000,
       // If you want to enable HTTPS,
       // 1. generate certificates (like mkcert)
