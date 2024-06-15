@@ -2,7 +2,10 @@
 
 React Starter Kit is to help you start new projects quicker without the tedious process of setting up the initial project. You can easily add/remove packages at your convenience, this is merely a template.
 
-![alt text](react-starter-kit-demo.gif)
+<div align="center">
+  <img src="https://github.com/Xenoty/react-starter-kit/assets/60667206/20522e6f-7aae-4b69-84a6-45b8734eaddd" style="display: block; margin: 0 auto;" alt="react-starter-kit-demo">
+</div>
+
 
 ## Overview
 
@@ -62,7 +65,7 @@ Via Command Palatte
 2. Search and Run `Dev Containers: Open a Folder in Container...`
 
 Via shortcut
-![alt text](image.png)
+![run-dev-container-shortcut](https://github.com/Xenoty/react-starter-kit/assets/60667206/e8d27bac-27e8-462a-b7e8-d8a56eece8cb)
 
 ## Resources
 
