@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
-import InfiniteScroll from 'react-infinite-scroll-component';
 import 'react-loading-skeleton/dist/skeleton.css';
+import InfiniteScroll from 'react-infinite-scroll-component';
 import { Product } from '../../../domain/entities/Product';
 import { getAllProducts } from '../../../data/api/endpoints/product.endpoint';
 import { Card, Col, Container, Form, Row } from 'react-bootstrap';

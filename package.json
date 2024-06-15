@@ -9,6 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/user-event": "^13.5.0",
+    "@vitejs/plugin-react": "^4.3.1",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "clsx": "^2.1.1",
@@ -19,6 +20,7 @@
     "react-infinite-scroll-component": "^6.1.0",
     "react-loading-skeleton": "^3.4.0",
     "react-router-dom": "^6.23.1",
+    "vite": "^5.3.1",
     "web-vitals": "^4.1.0"
   },
   "scripts": {
@@ -58,8 +60,6 @@
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.12.0",
     "@typescript-eslint/parser": "^7.12.0",
-    "@vitejs/plugin-react": "^4.3.0",
-    "@vitejs/plugin-react-swc": "^3.7.0",
     "dotenv-cli": "^7.4.2",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-typescript": "^18.0.0",
@@ -73,7 +73,6 @@
     "prettier": "^3.3.1",
     "sass": "^1.77.4",
     "typescript": "^5.4.5",
-    "vite": "^5.2.13",
     "vitest": "^1.6.0"
   }
 }
