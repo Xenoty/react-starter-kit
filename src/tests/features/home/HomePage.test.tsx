@@ -1,8 +1,7 @@
-import { render, screen } from '@testing-library/react';
 import { vi } from 'vitest';
+import { render, screen } from '@testing-library/react';
 import HomePage from '../../../app/features/home/HomePage';
-import logo from '../../../assets/logo.svg';
-
+import logo from '../../../app/assets/logo.svg';
 // Mock react-helmet-async before importing your component
 vi.mock('react-helmet-async', () => ({
   Helmet: () => null,
