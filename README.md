@@ -1,46 +1,92 @@
-# Getting Started with Create React App
+# React Starter Kit [![License MIT](https://img.shields.io/npm/l/react-photo-album.svg?color=blue)](https://github.com/igordanchenko/react-photo-album/blob/main/LICENSE)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React Starter Kit is to help you start new projects quicker without the tedious process of setting up the initial project. You can easily add/remove packages at your convenience, this is merely a template.
 
-## Available Scripts
+![alt text](react-starter-kit-demo.gif)
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+Project has been setup using `CLEAN` and `Vertical Slice` architecture. This has been adapted to make it more simpler and easier to manage.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Build:** Vite <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" style="height: 1em; vertical-align: middle;" />
+- **Testing:** Vitest <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitest/vitest-original.svg" style="height: 1em; vertical-align: middle;" />
+- **API:** Axios <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg" style="height: 1em; vertical-align: middle;" />
+- **Header Injection:** react-helmet-async
+- **Code Formatting:** eslint, prettier, editorconfig <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eslint/eslint-original.svg" style="height: 1em; vertical-align: middle;" />
+- **CSS Framework:** Bootstrap <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" style="height: 1em; vertical-align: middle;" />
+- **Git Control:** Husky 🐶
+- **Standardized IDE:** devcontainer <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" style="height: 1em; vertical-align: middle;" />
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+Install project packages
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm i
+```
 
-### `npm run build`
+Run the project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This will launch the website to `http://localhost:3000`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Environment Variables
 
-### `npm run eject`
+> Vite uses the `--mode` variable on a startup script to set the current environment.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Env variables are associated in the [infrastructure/config/config.ts](https://github.com/Xenoty/react-starter-kit/blob/master/src/infrastructure/config/config.ts) file.
+- Duplicate the `.env` file and called it: `.env.development.local` and add your values.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## SEO
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+SEO has been integrated using associated files `seo.json` with each page. These meta tags are then injected into the header using `react-helmet-async`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## How-to run devcontainer
 
-## Learn More
+> .devcontainer allows a standardized ide which includes all extensions and env setup via a docker image.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Install [Visual Studio Code](https://code.visualstudio.com/)
+2. Install VSCode extension: [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+3. Install and configure [Docker](https://www.docker.com/get-started)
+
+### Run
+
+Via Command Palatte
+
+1. Open the `Command Palette`
+2. Search and Run `Dev Containers: Open a Folder in Container...`
+
+Via shortcut
+![alt text](image.png)
+
+## Resources
+
+- Generate FavIcons: [favicon.io](https://favicon.io/)
+  - Add icons into `/public` directory.
+- Fonts: [Google Fonts](https://fonts.google.com/?sort=popularity)
+  - Embed into head of page using `react-helmet-async`.
+- Frontend Framework: [Bootstrap CSS](https://getbootstrap.com/), [React Bootstrap](https://react-bootstrap.netlify.app/)
+  - Update bootstrap variables in: [src/app/styles/custom.scss](https://github.com/Xenoty/react-starter-kit/blob/master/src/app/styles/custom.scss)
+- Api Calls: [Axios](https://github.com/axios/axios)
+- Linting: [Typescript lint](https://typescript-eslint.io/), [Prettier](https://prettier.io/), [EditorConfig](https://editorconfig.org/)
+- Git Control: [Husky](https://typicode.github.io/husky/)
+  - Run tasks before commit or push to code repo.
+- Testing: [Vitest](https://vitest.dev/)
+  - Run `npm test`
+- Routing: [React Router](https://reactrouter.com/en/main)
+- Header Injection: [react-helmet-async](https://github.com/staylor/react-helmet-async)
+  - Allows header injection for specific pages. This could include fonts, meta tags, etc.
+- Other Packages
+  - Conditional ClassName Strings: [clsx](https://github.com/lukeed/clsx)
+  - Skeleton Loading: [react-loading-skeleton](https://github.com/dvtng/react-loading-skeleton)
+    - _(Note\* The api called has been manually slowed down to show this effect)_.
+  - Infinite Scrolling: [react-infinite-scroll-component](https://github.com/ankeetmaini/react-infinite-scroll-component)
+  - Open Source Icons:
+    - [@fortawesome/fontawesome-svg-core]()
+    - [@fortawesome/free-solid-svg-icons]()
+    - [@fortawesome/react-fontawesome](https://github.com/FortAwesome/react-fontawesome)
