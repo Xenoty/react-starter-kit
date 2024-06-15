@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../../assets/logo.svg';
+import logo from '../../assets/logo.svg';
 import './HomePage.scss';
 import SEO from '../../components/headers/Seo';
 import seoData from './seo.json'; // Import the SEO data
