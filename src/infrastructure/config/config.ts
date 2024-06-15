@@ -1,5 +1,6 @@
 interface Config {
   SecretKey: string;
+  ApiUrl: string;
   // Add more environment variables as needed
 }
 
@@ -13,11 +14,11 @@ const checkEnvVars = (envVars: Config) => {
 };
 
 const config: Config = {
-  SecretKey: import.meta.env.VITE_SECRET_KEY || 'empty_secret',
-  // yourEnvVariable: process.env.REACT_APP_YOUR_VARIABLE || '',
+  SecretKey: import.meta.env.VITE_SECRET_KEY as string,
+  ApiUrl: import.meta.env.VITE_API_URL as string,
 };
 
-if (process.env.NODE_ENV !== 'production') {
+if (import.meta.env.NODE_ENV !== 'production') {
   // Only check in development mode
   checkEnvVars(config);
 }

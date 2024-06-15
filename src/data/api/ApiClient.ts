@@ -1,24 +1,25 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+import config from '../../infrastructure/config/config';
 
 class ApiClient {
   private axiosInstance: AxiosInstance;
 
-  constructor(baseURL: string, config?: AxiosRequestConfig) {
-    this.axiosInstance = axios.create({ baseURL, ...config });
+  constructor(baseURL: string, requestConfig?: AxiosRequestConfig) {
+    this.axiosInstance = axios.create({ baseURL, ...requestConfig });
   }
 
   async request<T>(
     method: 'get' | 'post' | 'put' | 'patch' | 'delete',
     url: string,
     data?: unknown,
-    config?: AxiosRequestConfig
+    requestConfig?: AxiosRequestConfig
   ): Promise<AxiosResponse<T>> {
     try {
       const response = await this.axiosInstance.request<T>({
         method,
         url,
         data,
-        ...config,
+        ...requestConfig,
       });
       return response;
     } catch (error) {
@@ -28,17 +29,21 @@ class ApiClient {
   }
 
   // Convenience methods (optional)
-  async get<T>(url: string, config?: AxiosRequestConfig) {
-    return this.request<T>('get', url, undefined, config);
+  async get<T>(url: string, requestConfig?: AxiosRequestConfig) {
+    return this.request<T>('get', url, undefined, requestConfig);
   }
 
-  async post<T>(url: string, data?: unknown, config?: AxiosRequestConfig) {
-    return this.request<T>('post', url, data, config);
+  async post<T>(
+    url: string,
+    data?: unknown,
+    requestConfig?: AxiosRequestConfig
+  ) {
+    return this.request<T>('post', url, data, requestConfig);
   }
 
   // ... similar methods for put, patch, delete
 }
 
-const apiClient = new ApiClient(import.meta.env.VITE_API_BASE_URL);
+const apiClient = new ApiClient(config.ApiUrl);
 
 export default apiClient;
