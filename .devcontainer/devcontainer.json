@@ -2,7 +2,7 @@
   "name": "React Starter Kit",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
   "forwardPorts": [3000],
-  "postCreateCommand": "npm install", // Only install dependencies,
+  "postCreateCommand": "corepack enable && pnpm install", // Only install dependencies,
   "features": {
     // Add this section
     "ghcr.io/devcontainers/features/node:1": {
