@@ -6,7 +6,6 @@ React Starter Kit is to help you start new projects quicker without the tedious 
   <img src="https://github.com/Xenoty/react-starter-kit/assets/60667206/20522e6f-7aae-4b69-84a6-45b8734eaddd" style="display: block; margin: 0 auto;" alt="react-starter-kit-demo">
 </div>
 
-
 ## Overview
 
 Project has been setup using `CLEAN` and `Vertical Slice` architecture. This has been adapted to make it more simpler and easier to manage.
@@ -18,21 +17,24 @@ Project has been setup using `CLEAN` and `Vertical Slice` architecture. This has
 - **Code Formatting:** eslint, prettier, editorconfig <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eslint/eslint-original.svg" style="height: 1em; vertical-align: middle;" />
 - **CSS Framework:** Bootstrap <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" style="height: 1em; vertical-align: middle;" />
 - **Git Control:** Husky 🐶
+- **Package Manager:**: corepack running pnpm <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pnpm/pnpm-original.svg" style="height: 1em; vertical-align: middle;" />
 - **Standardized IDE:** devcontainer <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" style="height: 1em; vertical-align: middle;" />
 
 ## Getting Started
 
-Install project packages
-
-```
-npm i
-```
-
-Run the project
-
-```
-npm start
-```
+1. Make sure you have [Node](https://nodejs.org/en/download/package-manager) `version >= 18.0`.
+2. Enable [corepack](https://github.com/nodejs/corepack?tab=readme-ov-file#-corepack)
+   ```bash
+   corepack enable
+   ```
+3. Install Dependencies
+   ```bash
+   pnpm install
+   ```
+4. Run the project
+   ```bash
+   pnpm start
+   ```
 
 This will launch the website to `http://localhost:3000`
 
