@@ -2,9 +2,8 @@
   "name": "React Starter Kit",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
   "forwardPorts": [3000],
-  "postCreateCommand": "corepack enable && pnpm install", // Only install dependencies,
+  "postCreateCommand": "corepack enable && npm install",
   "features": {
-    // Add this section
     "ghcr.io/devcontainers/features/node:1": {
       "version": "18" // Or the Node.js version you need
     }

@@ -17,7 +17,7 @@ Project has been setup using `CLEAN` and `Vertical Slice` architecture. This has
 - **Code Formatting:** eslint, prettier, editorconfig <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eslint/eslint-original.svg" style="height: 1em; vertical-align: middle;" />
 - **CSS Framework:** Bootstrap <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" style="height: 1em; vertical-align: middle;" />
 - **Git Control:** Husky 🐶
-- **Package Manager:**: corepack running pnpm <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pnpm/pnpm-original.svg" style="height: 1em; vertical-align: middle;" />
+- **Package Manager:**: corepack running npm <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg" style="height: 1em; vertical-align: middle;" />
 - **Standardized IDE:** devcontainer <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" style="height: 1em; vertical-align: middle;" />
 
 ## Getting Started
@@ -29,11 +29,11 @@ Project has been setup using `CLEAN` and `Vertical Slice` architecture. This has
    ```
 3. Install Dependencies
    ```bash
-   pnpm install
+   npm install
    ```
 4. Run the project
    ```bash
-   pnpm start
+   npm start
    ```
 
 This will launch the website to `http://localhost:3000`
