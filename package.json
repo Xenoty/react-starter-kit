@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-"packageManager": "npm@latest",
+  "packageManager": "npm@latest",
   "engines": {
     "node": ">=18.0.0"
   },
@@ -38,7 +38,7 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{ts,tsx,json,js}": [
+    "*.{ts,tsx,js}": [
       "eslint --fix",
       "prettier --write --ignore-unknown"
     ]

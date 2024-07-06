@@ -1,7 +1,7 @@
-# #!/bin/bash
-# echo "Running pre-commit hook..."
+#!/usr/bin/env sh
+echo "Running pre-comit hook..."
 
-# pnpm test
-# npm lint-staged --staged  
+# npm test
+npx lint-staged
 
-# echo "Finished pre-comit hook..."
+echo "Finished pre-comit hook..."
